@@ -1,0 +1,153 @@
+:root {
+    /* Main Colors */
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    /* Neutral Colors */
+
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+/* From Frondend Masters */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Load Fonts */
+@font-face {
+    font-family: "Jarakart Sans";
+    src: url(./assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+    font-weight: 500 800;
+}
+
+/* Styles */
+body {
+    font-family: "Jarakart Sans";
+    color: var(--dark-grayish-blue);
+    font-weight: 500;
+    background-color: var(--very-light-grayish-blue);
+}
+
+.notifications {
+    width: 80%;
+    margin: auto;
+    background-color: var(--white);
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
+@media (min-width:600px) {
+    .notifications {
+        width: 50%;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.notifications-right {
+    display: flex;
+    align-items: center;
+}
+
+.notifications-right h2 {
+    color: var(--very-dark-blue);
+    margin-right: 10px;
+}
+
+.notification-count {
+    background: var(--blue);
+    color: var(--white);
+    font-weight: 800;
+    padding: 3px 7px;
+    border-radius: 3px;
+}
+
+.toggle {
+    font-size: 16px;
+}
+
+.single-card {
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.unread {
+    background-color: var(--very-light-grayish-blue);
+}
+
+.unread .card-message::after {
+    content: "•";
+    color: var(--red);
+}
+
+.card-avatar img {
+    height: 40px;
+    width: 40px;
+}
+
+.card-contents {
+    margin-left: 20px;
+    width: 100%;
+}
+
+.commented-image {
+    margin-left: auto;
+}
+
+.commented-image:hover {
+    cursor: pointer;
+}
+
+.commented-image img {
+    height: 40px;
+    width: 40px;
+}
+
+.card-message span {
+    font-weight: 800;
+    color: var(--very-dark-blue)
+}
+
+.private-message {
+    border: 1px solid var(--grayish-blue);
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 7px;
+}
+
+.private-message:hover {
+    background: var(--light-grayish-blue-1);
+    cursor: pointer;
+}
+
+.avatar-name:hover,
+.group-name:hover,
+.post-name:hover,
+.toggle:hover {
+    cursor: pointer;
+    color: var(--blue)
+}
+
+time {
+    color: var(--grayish-blue);
+    font-size: 14px;
+}
