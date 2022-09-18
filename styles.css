@@ -65,9 +65,10 @@ header {
     align-items: center;
 }
 
-.notifications-right h2 {
+.notifications-right h1 {
     color: var(--very-dark-blue);
     margin-right: 10px;
+    font-size: 28px;
 }
 
 .notification-count {
